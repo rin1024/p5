@@ -10,7 +10,7 @@ Processingまわりの便利クラスをまとめています。
 
 ***DEMO:***
 
-![Demo](https://image-url.gif)
+それぞれのクラスファイルを参照。
 
 ## Features
 

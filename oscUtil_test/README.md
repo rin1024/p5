@@ -1,8 +1,8 @@
-# SerialUtil
+# OscUtil
 
 ![Badge Status](https://ci-as-a-service)
 
-Serial Utility class files for Processing
+OSC Utility class files for Processing
 
 ## Description
 

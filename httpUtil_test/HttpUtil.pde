@@ -1,5 +1,7 @@
 /**
   * POST形式でJsonをBodyに入れてHTTPリクエストするときの便利クラス
+  *
+  * commons-logging-1.2.jar, httpclient-4.5.2.jar, httpcore-4.4.4.jar, httpmime-4.5.2.jarが必要な様子
   **/
 import org.apache.http.HttpEntity;
 import org.apache.http.entity.StringEntity;
@@ -22,13 +24,13 @@ class HttpUtil {
       StringEntity sentity = new StringEntity(json.toString());
       sentity.setContentType("application/json");
       result = postHttpRequest(url, sentity);
-    } 
+    }
     catch(Exception e) {
       println("[postHttpRequest]" + e);
     }
     return result;
   }
-  
+
   // paramsをPOST
   String postHttpRequest(String url, HashMap<String,String> params) {
     String result = "";
@@ -39,7 +41,7 @@ class HttpUtil {
         mentity.addPart(key, new StringBody(v));
       }
       result = postHttpRequest(url, mentity);
-    } 
+    }
     catch(Exception e) {
       println("[postHttpRequest]" + e);
     }
@@ -67,7 +69,7 @@ class HttpUtil {
       }
 
       httpClient.getConnectionManager().shutdown();
-    } 
+    }
     catch(Exception e) {
       println("[postHttpRequest]" + e);
     }

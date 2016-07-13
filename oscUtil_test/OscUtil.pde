@@ -1,20 +1,25 @@
+/**
+ * ProcessingでOSCを使う時の便利クラス
+ *
+ * oscP5.jarが必要な様子
+ **/
 import oscP5.*;
 import netP5.*;
 
 class OscUtil {
   OscP5 oscP5;
   NetAddress targetLocation;
-  
+
   String targerDomain;
   int[] oscPort;
 
   OscUtil(String domain, int[] port) {
     targerDomain = domain;
-    
+
     oscPort = new int[2];
     oscPort[0] = port[0];
     oscPort[1] = port[1];
-    
+
     try {
       oscP5 = new OscP5(this, oscPort[0]);
       targetLocation = new NetAddress(targerDomain, oscPort[1]);

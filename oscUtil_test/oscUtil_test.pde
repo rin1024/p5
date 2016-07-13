@@ -1,8 +1,3 @@
-/**
- * ProcessingでOSCを使う時の便利クラス
- *
- * oscP5.jarが必要な様子
- **/
 OscUtil oscUtil;
 
 void setup() {
@@ -23,7 +18,7 @@ void mouseClicked() {
 void sendStringDataTest() {
   String address = "/msg";
   String[] datas = {"hoge", "fuga", "piyo"};
-  
+
   println("[sendStringDataTest]");
   oscUtil.sendByOSC(address, datas);
 }
@@ -31,7 +26,7 @@ void sendStringDataTest() {
 void sendIntDataTest() {
   String address = "/msg";
   int[] datas = {100,200,300,400,500,600};
-  
+
   println("[sendIntDataTest]");
   oscUtil.sendByOSC(address, datas);
 }

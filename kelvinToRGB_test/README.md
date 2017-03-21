@@ -50,6 +50,8 @@ you can easily translate Kelvin to RGB.
 
 [@rin1024](https://twitter.com/rin1024)
 
+import from http://www.kaede-software.com/2008/02/post_501.html
+
 ## License
 
 [MIT](http://b4b4r07.mit-license.org)

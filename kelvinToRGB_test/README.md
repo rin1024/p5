@@ -1,5 +1,7 @@
 # KelvinToRGB
 
+![KelvinToRGB](https://raw.githubusercontent.com/rin1024/p5/master/kelvinToRGB_test/demo.gif)
+
 Util class of color translation for Processing.
 
 you can easily translate Kelvin to RGB.
@@ -10,33 +12,19 @@ you can easily translate Kelvin to RGB.
 
     KelvinToRGB k;
 
-    final float MIN_K = 1096.0;
-    final float MAX_K = 22026.0;
-    final float INCREMENT_K = 100;
-
-    final long UPDATE_INTERVAL = 100;
-
-    long timer;
-    float kel = MIN_K; // 1096 ~ 22026K
-
     void setup() {
+      size(320, 240);
+
       k = new KelvinToRGB();
     }
 
     void draw() {
-      if (millis() - timer > UPDATE_INTERVAL) {
-        k.getRGBFromKelvin(kel);
+      float kel = 1096.0; // 1096 ~ 22026K
+      k.getRGBFromKelvin(kel);
+      background((int)k.R, (int)k.G, (int)k.B);
 
-        println("K: " + (int)kel + "\tR: " + (int)k.R + "\tG: " + (int)k.G + "\tB: " + (int)k.B);
-        background((int)k.R, (int)k.G, (int)k.B);
-
-        kel += INCREMENT_K;
-        if (kel > MAX_K) {
-          kel = MIN_K;
-        }
-
-        timer = millis();
-      }
+      fill(0);
+      text("K: " + (int)kel + "K\tR: " + (int)k.R + "\tG: " + (int)k.G + "\tB: " + (int)k.B, 10, height - 20, width, height);
     }
 
 

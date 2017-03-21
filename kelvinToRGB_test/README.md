@@ -1,7 +1,5 @@
 # KelvinToRGB
 
-![Badge Status](https://ci-as-a-service)
-
 Util class of color translation for Processing.
 
 you can easily translate Kelvin to RGB.
